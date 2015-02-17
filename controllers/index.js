@@ -1,13 +1,15 @@
 'use strict';
 
+var events = require('../models/events');
+
 /**
  * Controller that renders our index (home) page.
  */
 function index (request, response) {
   var contextData = {
-    'title': 'MGT 656',
+    'title': 'MGT 656 lalalala',
     'tagline': 'You are doomed (just kidding).',
-    'events': event.all,
+     'events':events.all
   };
   response.render('index.html', contextData);
 }

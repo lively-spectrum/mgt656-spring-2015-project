@@ -6,6 +6,8 @@
   </header>
 {% endblock %}
 
+   
+
 {% block mainContent %}
   <p>
     Welcome to {{ title }}. {{tagline}}
@@ -17,4 +19,6 @@
   <p>
     <a id="new" href="/events/new">Create a new event</a>
   </p>
+  
+   {% include "fragments/events-list.html" %}
 {% endblock %}
