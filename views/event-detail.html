@@ -1,18 +1,26 @@
 {% extends "layout.html" %}
 
 {% block mainContent %}
-  <h3>{{event.title}}</h3>
-  <br>
-  {% if event.image %}
-    <img src="{{event.image}}"><br><br>
-  {% endif %}
+  <h1 id="title">{{event.title}}</h1>
+  <p>When, foo: <span id="date"></span>{{event.date}}</span></p>
+  <p>Where, foo: <span id="location"></span>{{event.location}}</span></p>
+  <p>Who, foo:</p>
+  <ul id="attendees">
+  {% for attending in event.attending %}
+  <li>{{person}}</li>
+    {% endfor %}
+    </ul>
+    <img src="{{event.image}}" id="image">
+  <p>EVERYBODY DANCE NOW</p>
+  {% endblock %}
+
   
   <b>Date: <time datetime="{{event.date}}">{{event.date|prettyDate}}</time><br><br>
   <b>Location: {{event.location}}</b><br><br>
   
   {{event.attending.length}} attending:<br>
   
-  {% for attending in event.attending %}
+  
     {{attending}}<br>
   {%endfor%}
   
