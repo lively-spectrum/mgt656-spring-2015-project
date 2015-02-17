@@ -101,7 +101,6 @@ function rsvp (request, response){
     if(request.body.email.toLowerCase().indexOf('harvard') !== -1){
        contextData.errors.push('Invalid email, punk');
 }else{
-}
     contextData.errors.push('Invalid email');
     response.render('event-detail.html', contextData);    
   }
