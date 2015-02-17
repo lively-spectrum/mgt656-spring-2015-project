@@ -6,11 +6,25 @@
   </header>
 {% endblock %}
 
-   
-
 {% block mainContent %}
   <p>
     Welcome to {{ title }}. {{tagline}}
+  </p>
+  <img id="logo" src= "https://cloud.githubusercontent.com/assets/10736102/6218754/9b436e5e-b5ef-11e4-9d1e-481897e11c12.png">
+
+  <p>
+    Events:
+    <ul>
+      {% for event in events %}
+        <li class="event" id="event-{{event.id}}">
+          {% if event.date < now %} Expired:<strike>{% endif %}
+          <a href ="/events/{{event.id}}">{{event.title}}.</a>{{event.attending.length}} attending so far.
+          {% if event.date < now %}</strike>{% endif %}
+          <br>
+          <time datetime="{{event.date}}">{{event.date|prettyDate}}.</time>
+        </li>
+      {% endfor %}
+    </ul>
   </p>
   <p>
     Check out the <a href="/about">About us</a> page
@@ -19,6 +33,4 @@
   <p>
     <a id="new" href="/events/new">Create a new event</a>
   </p>
-  
-   {% include "fragments/events-list.html" %}
 {% endblock %}
