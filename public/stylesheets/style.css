@@ -14,3 +14,10 @@ a {
 .checkmark li:before {
     content: "\2713\0020";
 }
+
+.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+}
