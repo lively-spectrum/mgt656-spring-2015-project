@@ -76,7 +76,7 @@ function saveEvent(request, response){
   }else{
     response.render('create-event.html', contextData);
   }
-
+}
 function eventDetail (request, response) {
   var ev = events.getById(parseInt(request.params.id));
   if (ev === null) {
