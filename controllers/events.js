@@ -76,7 +76,6 @@ function saveEvent(request, response){
   }else{
     response.render('create-event.html', contextData);
   }
-}
 
 function eventDetail (request, response) {
   var ev = events.getById(parseInt(request.params.id));
@@ -118,7 +117,8 @@ function api(request, response){
         output.events.push(events.all[i]);
       }
     }
-  }else {
+  }
+  else {
     output.events = events.all; 
   }
   response.json(output);
