@@ -1,17 +1,21 @@
 {% extends "layout.html" %}
 
 {% block mainContent %}
-  <h3>{{event.title}}</h3><br>
+  <h3>{{event.title}}</h3>
+  <br>
   {% if event.image %}
-  <img src="{{event.image}}"><br><br>
+    <img src="{{event.image}}"><br><br>
   {% endif %}
-  <b>Date: <time datetime="{{event.date}}">{{event.date|prettyDate}}.</time><br><br>
+  
+  <b>Date: <time datetime="{{event.date}}">{{event.date|prettyDate}}</time><br><br>
   <b>Location: {{event.location}}</b><br><br>
   
   {{event.attending.length}} attending:<br>
+  
   {% for attending in event.attending %}
-  {{attending}}<br>
-{% endblock %}
+    {{attending}}<br>
+  {%endfor%}
+  
 
 <form id="rsvp" method="POST">
 Please provide your email to RSVP for this event:
