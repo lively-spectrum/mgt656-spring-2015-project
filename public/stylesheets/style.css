@@ -1,12 +1,17 @@
 body {
+  margin-top: 100px;
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url("https://cloud.githubusercontent.com/assets/10686023/6249670/b6bb2e16-b756-11e4-97a4-94b3f6137ea1.png");
 }
 
 a {
   color: #00B7FF;
 }
-
+big {
+  font: 30px;
+  font-weight: 900;
+}
 .form-errors {
 	color: red;
 }

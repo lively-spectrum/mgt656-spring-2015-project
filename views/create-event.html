@@ -12,25 +12,27 @@
       </ul>
     </div>
   {% endif %}
-
+  <big> You are about to be like so famous.</big>
+<br>
+<br>
 <form id="create-event" method="POST">
     <label for="title">Event title:</label>
     <input type="text" name="title">
     
-    
+  <br>  
     <label for="location"> Event location:</label>
     <input type="text" name="location">
-    
+  <br>  
     <label for="image"> Event image:</label>
     <input type="text" name="image">
-    
+   <br> 
     <label for="year">Event year:</label>
     <select id="year"
       name="year">
       <option>2015</option>
       <option>2016</option>
       </select>
-      
+  <br>    
     <label for="month"> Event month:</label>
     <select id="month"
       name="month">
@@ -47,7 +49,7 @@
       <option>November</option>
       <option>December</option>
       </select>
-    
+   <br> 
     <label for="day"> Event day:</label>
     <select id="day"
       name="day" >
@@ -83,7 +85,7 @@
       <option>30</option>
       <option>31</option>
       </select>
-      
+    <br>  
         <label for="hour"> Event hour:</label>
     <select id="hour"
       name="hour" >
@@ -113,14 +115,16 @@
       <option>23</option>
     
       </select>
-    
+    <br>
     <label for ="minute"> Event minute:</label>  
     <select id="minute"
     name="minute" >
       <option>0</option>
       <option>30</option>
       </select>
-      
+   <br>   
+    <input type="submit" name="submit">
+    
   </form>
 {% endblock %}
 

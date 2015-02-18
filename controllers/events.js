@@ -118,7 +118,7 @@ function rsvp (request, response){
 
   var tmpEmail = request.body.email;
   if(validator.isEmail(request.body.email) && request.body.email.toLowerCase().indexOf('@yale.edu')  !== -1){
-      ev.attending.push(tmpEmail);
+      ev.attending.push(request.body.email);
       response.redirect('/events/' + ev.id);
       }
       else{
@@ -128,8 +128,9 @@ function rsvp (request, response){
           }
           else{
             contextData.errors.push('Invalid email');
-            response.render('event-detail.html', contextData);    
           }
+            response.render('event-detail.html', contextData);    
+        
       }
   }
 function api(request, response){
