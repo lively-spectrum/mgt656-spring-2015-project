@@ -123,7 +123,7 @@ function rsvp (request, response){
       }
       else{
         var contextData = {errors: [], event: ev};
-          if(request.body.email.toLowerCase().indexOf('harvard') !== -1){
+          if(request.body.email.toLowerCase().indexOf('@harvard.edu') !== -1){
             contextData.errors.push('Invalid email, punk');
           }
           else{
