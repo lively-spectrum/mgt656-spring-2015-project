@@ -14,7 +14,7 @@
       {% for event in events %}
         <li class="event" id="event-{{event.id}}">
           {% if event.date < now %} Expired:<strike>{% endif %}
-          <a href ="/events/{{event.id}}">{{event.title}}.</a>{{event.attending.length}} attending so far.
+          <a href ="/events/{{event.id}}">{{event.title}}.</a> {{event.attending.length}} attending so far.
           {% if event.date < now %}</strike>{% endif %}
           <br>
           <time datetime="{{event.date}}">{{event.date|prettyDate}}.</time>
