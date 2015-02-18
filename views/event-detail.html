@@ -1,6 +1,7 @@
 {% extends "layout.html" %}
 
 {% block mainContent %}
+<script src="//cdn.optimizely.com/js/2500120234.js"></script>
   <h1 id="title">{{event.title}}</h1>
   <p>When: <span id="date">{{event.date}}</span></p>
   <p>Where: <span id="location">{{event.location}}</span></p>
@@ -11,7 +12,7 @@
     {% endfor %}
     </ul>
     <img src="{{event.image}}" id="image">
-  <p>EVERYBODY DANCE NOW. Also, please consider <a class="donate" href="/">donating</a> </p>
+  <p>EVERYBODY DANCE NOW. Also, please consider <a class="donate donation" href="/">donating</a> </p>
 {% if errors %}
 <div>
   <ul class="form-errors">
